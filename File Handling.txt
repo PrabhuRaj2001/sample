@@ -1,0 +1,66 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Main {
+	
+	    public static void main(String[] args) throws IOException {
+	    	InputStreamReader r=new InputStreamReader(System.in);
+	    	
+	    	int s=r.read();
+	    	while(r.ready())
+	    	{
+	    		System.out.println((char)s);
+	    		s=r.read();
+	    	}
+	    r.close();    
+	    	
+	   //==================================================================== 	
+	    	FileReader file=new FileReader("D:\\note.txt");
+	    int s1=file.read();
+	    
+	    while(file.ready())
+	    {
+	    	System.out.println((char)s1);
+	    	s1=file.read();
+	    }
+	    	
+	    	
+	    	//========================================================================
+	    	
+	    	BufferedReader br=new BufferedReader( new FileReader("D:\\note.txt"));
+	    	//byte--> char
+	    	String s2=br.readLine();
+	    	System.out.println("called readline "+ s2);
+	    	
+//	    	
+//	    	======================================================
+	    	
+
+
+	    	
+	    	BufferedReader a=new BufferedReader(new FileReader("D:\\note.txt"));
+	    	
+	    	String s3=a.readLine();
+	    	String array[]=s3.split(" ");
+	    	System.out.println(array[0]);
+	    	
+	    	
+	    	
+	    	
+	    	
+	    
+	    	
+	    	BufferedWriter b=new BufferedWriter(new FileWriter("D:\\note.txt",true));
+	    	b.write("written sucess ji");
+	    	b.close();
+	    	
+	    	
+	    }
+	}
+
+	
